@@ -1,11 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var product_1 = require("./domain/product");
-var products = [
-    new product_1.Product("croquettes", 5, 33),
-    new product_1.Product("croquettes", 5, 33),
-    new product_1.Product("croquettes", 5, 33),
-];
+var product_service_1 = require("./service/product-service");
+var s = new product_service_1.ProductService();
+var products = s.generateProducts(30);
 console.log(products);
-for (var i = 0; i < 1000; i++) {
-}
